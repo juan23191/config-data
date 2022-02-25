@@ -19,3 +19,7 @@ spring:
           uri: lb://service-movie
           predicates:
             - Path=/movies/v1/movie/**
+        - id: service-showtime
+          uri: lb://service-showtime
+          predicates:
+            - Path=/movies/v1/showtimes/**
