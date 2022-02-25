@@ -9,15 +9,15 @@ spring:
         url: http://localhost:9020
   application:
     name: service-showtime
-  h2:
-    console:
-      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
   datasource:
-    url: jdbc:h2:mem:showtimeBD;
-    driver-class-name: org.h2.Driver
-    platform: h2
-    username: sa
-    password:
+    url: jdbc:mysql://localhost:3306/tallerpds2showtimes?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
 eureka:
   client:
     serviceUrl:
